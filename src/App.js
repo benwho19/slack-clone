@@ -6,7 +6,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Header } from './components'
+import { Header, Sidebar } from './components'
+import styled from 'styled-components'
 
 function App() {
   return (
@@ -14,17 +15,26 @@ function App() {
 
       <Router>
         <>
-          <Switch>
-            <Route path="/">
-              <Header/>
-              {/* <Home /> */}
-            </Route>
-          </Switch>
+          <Header/>
+
+          <AppBody>
+            <Sidebar/>
+            <Switch>
+              <Route path="/" exact>
+                
+              </Route>
+            </Switch>
+          </AppBody>
+
         </>
       </Router>
-
     </div>
   );
 }
 
 export default App;
+
+const AppBody = styled.div`
+  display: flex;
+  height: 100vh;
+`
