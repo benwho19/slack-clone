@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Header } from './components'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <>
           <Switch>
             <Route path="/">
-              <Home />
+              <Header/>
+              {/* <Home /> */}
             </Route>
           </Switch>
         </>
